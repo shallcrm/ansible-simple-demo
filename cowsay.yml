@@ -3,7 +3,7 @@
 ###########################################################################################################
 
 ---
-# Isstall packages using system package manager
+# Install packages using system package manager
 
 - name: Install cowsay
   hosts: all

@@ -1,0 +1,13 @@
+###########################################################################################################
+# Ansible Demonstration - Gather Facts 
+###########################################################################################################
+
+---
+# Gather Ansible Facts 
+
+- name: Just gather facts
+  hosts: all
+  gather_facts: true
+  tasks:
+    - debug: var=hostvars[inventory_hostname]['ansible_default_ipv4']['address']
+
