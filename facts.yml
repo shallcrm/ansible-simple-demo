@@ -9,5 +9,6 @@
   hosts: all
   gather_facts: true
   tasks:
+    - name: Debug
     - debug: var=hostvars[inventory_hostname]['ansible_default_ipv4']['address']
 
