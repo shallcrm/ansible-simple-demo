@@ -11,7 +11,7 @@
 
     - name: Install cowsay package
       apt: 
-        name: cowasay
+        name: cowsay
         state: present
         update_cache: yes
 
