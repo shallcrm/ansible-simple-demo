@@ -1,0 +1,14 @@
+###########################################################################################################
+# Ansible Demonstration - Set time zone
+###########################################################################################################
+
+---
+# Perform common system configuration tasks
+
+- name: set_time_zone
+  hosts: all
+  tasks:
+    - name: Set time zone to Australia/Sydney
+      timezone: 
+        name: "Australia/Sydney"
+
