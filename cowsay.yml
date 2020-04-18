@@ -5,12 +5,15 @@
 ---
 # Isstall packages using system package manager
 
-- name: Install cowsay package
-  apt: 
-    name: cowasay
-    state: present
-    update_cache: yes
+- name: Install cowsay
+  hosts: all
+  tasks:
 
-- name: Send a message with cowsay
-  command: /usr/games/cowsay " The installation worked! "
-  
+    - name: Install cowsay package
+      apt: 
+        name: cowasay
+        state: present
+        update_cache: yes
+
+    - name: Send a message with cowsay
+      command: /usr/games/cowsay " The installation worked! "
